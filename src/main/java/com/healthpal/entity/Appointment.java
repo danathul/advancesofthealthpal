@@ -27,6 +27,8 @@ public class Appointment {
     @Enumerated(EnumType.STRING)
     private Status status = Status.PENDING;
 
+    // ... rest of the code
+
     @Enumerated(EnumType.STRING)
     private Mode mode = Mode.VIDEO;
 
@@ -38,7 +40,8 @@ public class Appointment {
 
     private String notes;
 
+    // 👇 التعديل هنا: أضف IN_PERSON للقائمة
     public enum Status { PENDING, APPROVED, CANCELLED, COMPLETED }
-    public enum Mode { VIDEO, AUDIO, CHAT }
+    public enum Mode { VIDEO, AUDIO, CHAT, IN_PERSON }
     public enum Type { PHYSICAL, MENTAL }
 }
