@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-
+//rahaf's part
 @Entity
 @Table(name = "health_alerts")
 @Data

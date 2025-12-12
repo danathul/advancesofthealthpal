@@ -25,5 +25,13 @@ public class User {
     @Column(name = "created_at")
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    public enum Role { PATIENT, DOCTOR, COUNSELOR }
+    // 👇 أضف DONOR هنا
+    public enum Role {
+        PATIENT,
+        DOCTOR,
+        COUNSELOR,
+        DONOR,
+        ADMIN,
+        NGO        // 👈 أضفنا هذه، وهي سبب المشكلة الحالية
+    }
 }

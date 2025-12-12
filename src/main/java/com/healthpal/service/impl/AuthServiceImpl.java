@@ -11,6 +11,7 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
@@ -28,37 +29,46 @@ public class AuthServiceImpl implements AuthService {
     private final PatientRepository patientRepo;
     private final DoctorRepository doctorRepo;
     private final ModelMapper mapper;
+    private final PasswordEncoder passwordEncoder;  // ← NEW: Inject password encoder
 
     @Override
     @Transactional
     public UserDTO register(RegisterRequestDTO dto) {
         logger.info("Registering new user: {}", dto.getEmail());
 
+        // Check if email already exists
         if (userRepo.findByEmail(dto.getEmail()).isPresent()) {
             logger.warn("Registration failed: Email already exists - {}", dto.getEmail());
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Email already registered");
         }
 
+        // Create user entity
         User user = new User();
         user.setName(dto.getName());
         user.setEmail(dto.getEmail());
-        user.setPassword(dto.getPassword());
+        user.setPassword(passwordEncoder.encode(dto.getPassword()));  // ← ENCRYPT PASSWORD
         user.setPhone(dto.getPhone());
 
+        // Set role
         try {
             user.setRole(User.Role.valueOf(dto.getRole().toUpperCase()));
         } catch (IllegalArgumentException e) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid role");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid role. Must be: PATIENT, DOCTOR, or COUNSELOR");
         }
 
         User savedUser = userRepo.save(user);
 
+        // Create role-specific profile
         if (user.getRole() == User.Role.PATIENT) {
             Patient patient = new Patient();
             patient.setUser(savedUser);
             patient.setAge(dto.getAge());
             if (dto.getGender() != null) {
-                patient.setGender(Patient.Gender.valueOf(dto.getGender()));
+                try {
+                    patient.setGender(Patient.Gender.valueOf(dto.getGender().toUpperCase()));
+                } catch (IllegalArgumentException e) {
+                    patient.setGender(Patient.Gender.Other);
+                }
             }
             patientRepo.save(patient);
             logger.info("Patient profile created for user: {}", savedUser.getId());
@@ -79,15 +89,17 @@ public class AuthServiceImpl implements AuthService {
     public UserDTO login(LoginRequestDTO dto) {
         logger.info("Login attempt for email: {}", dto.getEmail());
 
+        // Find user by email
         User user = userRepo.findByEmail(dto.getEmail())
                 .orElseThrow(() -> {
                     logger.warn("Login failed: User not found - {}", dto.getEmail());
-                    return new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials");
+                    return new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid email or password");
                 });
 
-        if (!user.getPassword().equals(dto.getPassword())) {
+        // Verify password
+        if (!passwordEncoder.matches(dto.getPassword(), user.getPassword())) {  // ← CHECK ENCRYPTED PASSWORD
             logger.warn("Login failed: Wrong password for - {}", dto.getEmail());
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid email or password");
         }
 
         logger.info("User logged in successfully: {}", user.getEmail());

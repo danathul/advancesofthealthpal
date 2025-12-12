@@ -58,20 +58,25 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-        <!-- === ADD THESE 2 === -->
-
-        <!-- Swagger UI (springdoc) - MANDATORY -->
+        <!-- Swagger UI (springdoc) -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.3.0</version>
         </dependency>
 
-        <!-- ModelMapper - For DTO ↔ Entity -->
+        <!-- ModelMapper -->
         <dependency>
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>
             <version>3.2.0</version>
+        </dependency>
+
+        <!-- Spring Boot Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

@@ -5,7 +5,7 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 import java.time.LocalDateTime;
-
+//rahaf's part
 @Entity
 @Table(name = "webinars")
 @Data

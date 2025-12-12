@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
+//rahaf's part
 @Tag(name = "Group 3: Health Education & Public Health Alerts")
 @RestController
 @RequestMapping("/api/v1/alerts")
