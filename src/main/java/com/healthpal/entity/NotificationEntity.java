@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-
+//rahaf's part
 @Entity
 @Table(name = "notifications")
 @Data

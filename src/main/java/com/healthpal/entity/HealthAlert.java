@@ -4,7 +4,7 @@ package com.healthpal.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;
-
+//rahaf's part
 @Entity
 @Table(name = "health_alerts")
 @Data
