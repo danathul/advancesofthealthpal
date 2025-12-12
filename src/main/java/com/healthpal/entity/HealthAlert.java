@@ -2,12 +2,18 @@
 package com.healthpal.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "health_alerts")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class HealthAlert {
 
     @Id
@@ -20,5 +26,5 @@ public class HealthAlert {
     private String region;
 
     private LocalDateTime publishedAt = LocalDateTime.now();
-    private boolean isActive = true;
+    private boolean active = true;
 }

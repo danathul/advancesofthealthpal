@@ -24,6 +24,6 @@ public class HealthAlertController {
     @Operation(summary = "Get all active public health alerts")
     @GetMapping
     public ResponseEntity<List<HealthAlert>> getActiveAlerts() {
-        return ResponseEntity.ok(alertRepo.findByIsActiveTrueOrderByPublishedAtDesc());
+        return ResponseEntity.ok(alertRepo.findAll());
     }
 }

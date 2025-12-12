@@ -2,6 +2,9 @@ package com.healthpal.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
+import lombok.EqualsAndHashCode; // ضيفي هذا
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -22,21 +25,19 @@ public class TreatmentCase {
 
     private String title;
     private String description;
-
     @Column(precision = 12, scale = 2)
     private BigDecimal requiredAmount;
-
     @Column(precision = 12, scale = 2)
     private BigDecimal collectedAmount = BigDecimal.ZERO;
-
     private String medicalReportUrl;
-
-    // ← غيرناه من Enum إلى String
-    private String status = "OPEN"; // OPEN, FULLY_FUNDED, CLOSED, CANCELLED
-    private String supportedByNgo; // اسم المنظمة الداعمة (اختياري)
+    private String status = "OPEN";
+    private String supportedByNgo;
     private LocalDateTime createdAt = LocalDateTime.now();
     private LocalDateTime deadline;
 
+    // 👇👇 التعديل الحاسم: أضفنا Exclude للـ Equals والـ HashCode والـ ToString
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "treatmentCase", cascade = CascadeType.ALL)
     private List<Donation> donations = new ArrayList<>();
 }

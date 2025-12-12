@@ -4,7 +4,11 @@
     <data-source name="healthpal_db@localhost" uuid="5a789e1d-d50a-491d-a2f8-9f38d1dbf6c0">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
       <user-name>root</user-name>
-      <schema-mapping />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" negative="1" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>
