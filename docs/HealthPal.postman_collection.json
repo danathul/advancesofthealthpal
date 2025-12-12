@@ -1,0 +1,3634 @@
+
+{
+	"info": {
+		"_postman_id": "b616fb19-0333-4ed8-8dd9-fe5e162520e8",
+		"name": "HealthPal API - Group 1",
+		"description": "Remote Consultations & Mental Health Support",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50772129",
+		"_collection_link": "https://danaimad04-475829.postman.co/workspace/danaimad04's-Workspace~390d619d-863f-4b3c-8fd8-485b31b94343/collection/50772129-b616fb19-0333-4ed8-8dd9-fe5e162520e8?action=share&source=collection_link&creator=50772129"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "sponsorship-resources",
+							"item": [
+								{
+									"name": "medicine-requests",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "fulfill",
+													"item": [
+														{
+															"name": "Mark medicine request as fulfilled",
+															"request": {
+																"method": "PUT",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/sponsorship-resources/medicine-requests/:id/fulfill?fulfilledById=831",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"sponsorship-resources",
+																		"medicine-requests",
+																		":id",
+																		"fulfill"
+																	],
+																	"query": [
+																		{
+																			"key": "fulfilledById",
+																			"value": "831"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "831"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "PUT",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/sponsorship-resources/medicine-requests/:id/fulfill?fulfilledById=831",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"sponsorship-resources",
+																				"medicine-requests",
+																				":id",
+																				"fulfill"
+																			],
+																			"query": [
+																				{
+																					"key": "fulfilledById",
+																					"value": "831"
+																				}
+																			],
+																			"variable": [
+																				{
+																					"key": "id"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"id\": 1259,\n  \"patientId\": 6661,\n  \"medicineName\": \"string\",\n  \"quantity\": 366,\n  \"dosage\": \"string\",\n  \"location\": \"string\",\n  \"phone\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"1985-09-07T11:56:39.402Z\",\n  \"fulfilledById\": 7271\n}"
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "pending",
+											"item": [
+												{
+													"name": "List all pending medicine requests",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/sponsorship-resources/medicine-requests/pending",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"sponsorship-resources",
+																"medicine-requests",
+																"pending"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/sponsorship-resources/medicine-requests/pending",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"sponsorship-resources",
+																		"medicine-requests",
+																		"pending"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "[\n  {\n    \"id\": 3141,\n    \"patientId\": 2767,\n    \"medicineName\": \"string\",\n    \"quantity\": 6197,\n    \"dosage\": \"string\",\n    \"location\": \"string\",\n    \"phone\": \"string\",\n    \"status\": \"string\",\n    \"createdAt\": \"1957-02-17T10:28:24.932Z\",\n    \"fulfilledById\": 1806\n  },\n  {\n    \"id\": 437,\n    \"patientId\": 5337,\n    \"medicineName\": \"string\",\n    \"quantity\": 2573,\n    \"dosage\": \"string\",\n    \"location\": \"string\",\n    \"phone\": \"string\",\n    \"status\": \"string\",\n    \"createdAt\": \"1991-11-20T20:31:43.142Z\",\n    \"fulfilledById\": 7297\n  }\n]"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Request medicine delivery",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 1259,\n  \"patientId\": 6661,\n  \"medicineName\": \"string\",\n  \"quantity\": 366,\n  \"dosage\": \"string\",\n  \"location\": \"string\",\n  \"phone\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"1985-09-07T11:56:39.402Z\",\n  \"fulfilledById\": 7271\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/sponsorship-resources/medicine-requests",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"sponsorship-resources",
+														"medicine-requests"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": 1259,\n  \"patientId\": 6661,\n  \"medicineName\": \"string\",\n  \"quantity\": 366,\n  \"dosage\": \"string\",\n  \"location\": \"string\",\n  \"phone\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"1985-09-07T11:56:39.402Z\",\n  \"fulfilledById\": 7271\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/sponsorship-resources/medicine-requests",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"sponsorship-resources",
+																"medicine-requests"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": 1259,\n  \"patientId\": 6661,\n  \"medicineName\": \"string\",\n  \"quantity\": 366,\n  \"dosage\": \"string\",\n  \"location\": \"string\",\n  \"phone\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"1985-09-07T11:56:39.402Z\",\n  \"fulfilledById\": 7271\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "equipment",
+									"item": [
+										{
+											"name": "List available equipment",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/sponsorship-resources/equipment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"sponsorship-resources",
+														"equipment"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/sponsorship-resources/equipment",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"sponsorship-resources",
+																"equipment"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"id\": 9493,\n    \"name\": \"string\",\n    \"type\": \"string\",\n    \"description\": \"string\",\n    \"quantityAvailable\": 8655,\n    \"location\": \"string\",\n    \"contactPhone\": \"string\",\n    \"providerId\": 4828,\n    \"providerName\": \"string\",\n    \"lendable\": false,\n    \"listedAt\": \"1989-06-15T09:31:23.390Z\"\n  },\n  {\n    \"id\": 6554,\n    \"name\": \"string\",\n    \"type\": \"string\",\n    \"description\": \"string\",\n    \"quantityAvailable\": 6606,\n    \"location\": \"string\",\n    \"contactPhone\": \"string\",\n    \"providerId\": 6435,\n    \"providerName\": \"string\",\n    \"lendable\": false,\n    \"listedAt\": \"2014-04-14T20:21:55.569Z\"\n  }\n]"
+												}
+											]
+										},
+										{
+											"name": "Add new equipment to inventory",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 2677,\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"description\": \"string\",\n  \"quantityAvailable\": 5045,\n  \"location\": \"string\",\n  \"contactPhone\": \"string\",\n  \"providerId\": 1916,\n  \"providerName\": \"string\",\n  \"lendable\": true,\n  \"listedAt\": \"1973-11-15T10:58:37.033Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/sponsorship-resources/equipment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"sponsorship-resources",
+														"equipment"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": 2677,\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"description\": \"string\",\n  \"quantityAvailable\": 5045,\n  \"location\": \"string\",\n  \"contactPhone\": \"string\",\n  \"providerId\": 1916,\n  \"providerName\": \"string\",\n  \"lendable\": true,\n  \"listedAt\": \"1973-11-15T10:58:37.033Z\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/sponsorship-resources/equipment",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"sponsorship-resources",
+																"equipment"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": 2677,\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"description\": \"string\",\n  \"quantityAvailable\": 5045,\n  \"location\": \"string\",\n  \"contactPhone\": \"string\",\n  \"providerId\": 1916,\n  \"providerName\": \"string\",\n  \"lendable\": true,\n  \"listedAt\": \"1973-11-15T10:58:37.033Z\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "donations",
+									"item": [
+										{
+											"name": "Donate to a case",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 9135,\n  \"caseId\": 1905,\n  \"donorId\": 3460,\n  \"amount\": 5819.458354869158,\n  \"donatedAt\": \"1984-09-05T06:25:04.920Z\",\n  \"anonymous\": false,\n  \"messageToPatient\": \"string\",\n  \"donorName\": \"string\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/sponsorship-resources/donations",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"sponsorship-resources",
+														"donations"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": 9135,\n  \"caseId\": 1905,\n  \"donorId\": 3460,\n  \"amount\": 5819.458354869158,\n  \"donatedAt\": \"1984-09-05T06:25:04.920Z\",\n  \"anonymous\": false,\n  \"messageToPatient\": \"string\",\n  \"donorName\": \"string\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/sponsorship-resources/donations",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"sponsorship-resources",
+																"donations"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": 9135,\n  \"caseId\": 1905,\n  \"donorId\": 3460,\n  \"amount\": 5819.458354869158,\n  \"donatedAt\": \"1984-09-05T06:25:04.920Z\",\n  \"anonymous\": false,\n  \"messageToPatient\": \"string\",\n  \"donorName\": \"string\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "cases",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Get case details + donations",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/sponsorship-resources/cases/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"sponsorship-resources",
+																"cases",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/sponsorship-resources/cases/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"sponsorship-resources",
+																		"cases",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": 3414,\n  \"patientId\": 8187,\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"requiredAmount\": 3963.218990923456,\n  \"collectedAmount\": 4304.046216914743,\n  \"medicalReportUrl\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"1962-11-27T14:05:27.716Z\",\n  \"deadline\": \"2000-08-06T12:26:53.325Z\",\n  \"progressPercentage\": 3766.0017098101584\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "{caseId}",
+											"item": [
+												{
+													"name": "donations",
+													"item": [
+														{
+															"name": "Get donations for a case",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/sponsorship-resources/cases/:caseId/donations",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"sponsorship-resources",
+																		"cases",
+																		":caseId",
+																		"donations"
+																	],
+																	"variable": [
+																		{
+																			"key": "caseId",
+																			"value": "831"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/sponsorship-resources/cases/:caseId/donations",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"sponsorship-resources",
+																				"cases",
+																				":caseId",
+																				"donations"
+																			],
+																			"variable": [
+																				{
+																					"key": "caseId"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  {\n    \"id\": 5720,\n    \"caseId\": 242,\n    \"donorId\": 9663,\n    \"amount\": 123.21551267209907,\n    \"donatedAt\": \"1986-01-25T09:37:06.981Z\",\n    \"anonymous\": true,\n    \"messageToPatient\": \"string\",\n    \"donorName\": \"string\"\n  },\n  {\n    \"id\": 5302,\n    \"caseId\": 8683,\n    \"donorId\": 4891,\n    \"amount\": 4350.671614495906,\n    \"donatedAt\": \"1964-06-28T00:57:05.082Z\",\n    \"anonymous\": true,\n    \"messageToPatient\": \"string\",\n    \"donorName\": \"string\"\n  }\n]"
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Get all open cases",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/sponsorship-resources/cases",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"sponsorship-resources",
+														"cases"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/sponsorship-resources/cases",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"sponsorship-resources",
+																"cases"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"id\": 2569,\n    \"patientId\": 4759,\n    \"title\": \"string\",\n    \"description\": \"string\",\n    \"requiredAmount\": 8102.502021488933,\n    \"collectedAmount\": 6180.227471156967,\n    \"medicalReportUrl\": \"string\",\n    \"status\": \"string\",\n    \"createdAt\": \"1979-04-29T13:58:01.175Z\",\n    \"deadline\": \"1947-04-18T15:17:11.174Z\",\n    \"progressPercentage\": 3078.6601234537648\n  },\n  {\n    \"id\": 2190,\n    \"patientId\": 2057,\n    \"title\": \"string\",\n    \"description\": \"string\",\n    \"requiredAmount\": 6243.0975335594985,\n    \"collectedAmount\": 8379.026276610324,\n    \"medicalReportUrl\": \"string\",\n    \"status\": \"string\",\n    \"createdAt\": \"1987-10-17T19:22:11.062Z\",\n    \"deadline\": \"1979-09-17T16:22:58.803Z\",\n    \"progressPercentage\": 8480.060808489103\n  }\n]"
+												}
+											]
+										},
+										{
+											"name": "Create new treatment sponsorship case",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 3414,\n  \"patientId\": 8187,\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"requiredAmount\": 3963.218990923456,\n  \"collectedAmount\": 4304.046216914743,\n  \"medicalReportUrl\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"1962-11-27T14:05:27.716Z\",\n  \"deadline\": \"2000-08-06T12:26:53.325Z\",\n  \"progressPercentage\": 3766.0017098101584\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/sponsorship-resources/cases",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"sponsorship-resources",
+														"cases"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": 3414,\n  \"patientId\": 8187,\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"requiredAmount\": 3963.218990923456,\n  \"collectedAmount\": 4304.046216914743,\n  \"medicalReportUrl\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"1962-11-27T14:05:27.716Z\",\n  \"deadline\": \"2000-08-06T12:26:53.325Z\",\n  \"progressPercentage\": 3766.0017098101584\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/sponsorship-resources/cases",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"sponsorship-resources",
+																"cases"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": 3414,\n  \"patientId\": 8187,\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"requiredAmount\": 3963.218990923456,\n  \"collectedAmount\": 4304.046216914743,\n  \"medicalReportUrl\": \"string\",\n  \"status\": \"string\",\n  \"createdAt\": \"1962-11-27T14:05:27.716Z\",\n  \"deadline\": \"2000-08-06T12:26:53.325Z\",\n  \"progressPercentage\": 3766.0017098101584\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "content",
+							"item": [
+								{
+									"name": "guides",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Get guide by ID",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/guides/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"guides",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/content/guides/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"content",
+																		"guides",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"guide_id\": 4761,\n  \"title\": \"string\",\n  \"category\": \"string\",\n  \"language\": \"string\",\n  \"region\": \"string\",\n  \"image_url\": \"string\",\n  \"content\": \"string\",\n  \"created_at\": \"1975-06-27T12:54:32.772Z\",\n  \"createdBy\": 3416\n}"
+														}
+													]
+												},
+												{
+													"name": "Update health guide",
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"guide_id\": 4761,\n  \"title\": \"string\",\n  \"category\": \"string\",\n  \"language\": \"string\",\n  \"region\": \"string\",\n  \"image_url\": \"string\",\n  \"content\": \"string\",\n  \"created_at\": \"1975-06-27T12:54:32.772Z\",\n  \"createdBy\": 3416\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/guides/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"guides",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"guide_id\": 4761,\n  \"title\": \"string\",\n  \"category\": \"string\",\n  \"language\": \"string\",\n  \"region\": \"string\",\n  \"image_url\": \"string\",\n  \"content\": \"string\",\n  \"created_at\": \"1975-06-27T12:54:32.772Z\",\n  \"createdBy\": 3416\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/content/guides/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"content",
+																		"guides",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"guide_id\": 4761,\n  \"title\": \"string\",\n  \"category\": \"string\",\n  \"language\": \"string\",\n  \"region\": \"string\",\n  \"image_url\": \"string\",\n  \"content\": \"string\",\n  \"created_at\": \"1975-06-27T12:54:32.772Z\",\n  \"createdBy\": 3416\n}"
+														}
+													]
+												},
+												{
+													"name": "Delete health guide",
+													"request": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/guides/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"guides",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "DELETE",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/content/guides/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"content",
+																		"guides",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Get all health guides",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/content/guides",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"content",
+														"guides"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/guides",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"guides"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"guide_id\": 3691,\n    \"title\": \"string\",\n    \"category\": \"string\",\n    \"language\": \"string\",\n    \"region\": \"string\",\n    \"image_url\": \"string\",\n    \"content\": \"string\",\n    \"created_at\": \"1962-02-09T15:57:49.390Z\",\n    \"createdBy\": 9249\n  },\n  {\n    \"guide_id\": 4028,\n    \"title\": \"string\",\n    \"category\": \"string\",\n    \"language\": \"string\",\n    \"region\": \"string\",\n    \"image_url\": \"string\",\n    \"content\": \"string\",\n    \"created_at\": \"1958-06-27T08:14:49.845Z\",\n    \"createdBy\": 802\n  }\n]"
+												}
+											]
+										},
+										{
+											"name": "Create new health guide",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"guide_id\": 4761,\n  \"title\": \"string\",\n  \"category\": \"string\",\n  \"language\": \"string\",\n  \"region\": \"string\",\n  \"image_url\": \"string\",\n  \"content\": \"string\",\n  \"created_at\": \"1975-06-27T12:54:32.772Z\",\n  \"createdBy\": 3416\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/content/guides",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"content",
+														"guides"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"guide_id\": 4761,\n  \"title\": \"string\",\n  \"category\": \"string\",\n  \"language\": \"string\",\n  \"region\": \"string\",\n  \"image_url\": \"string\",\n  \"content\": \"string\",\n  \"created_at\": \"1975-06-27T12:54:32.772Z\",\n  \"createdBy\": 3416\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/guides",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"guides"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"guide_id\": 4761,\n  \"title\": \"string\",\n  \"category\": \"string\",\n  \"language\": \"string\",\n  \"region\": \"string\",\n  \"image_url\": \"string\",\n  \"content\": \"string\",\n  \"created_at\": \"1975-06-27T12:54:32.772Z\",\n  \"createdBy\": 3416\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "workshops",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Get workshop by ID",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/workshops/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"workshops",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/content/workshops/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"content",
+																		"workshops",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"workshop_id\": 8621,\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"location\": \"string\",\n  \"event_date\": \"1996-05-27\",\n  \"speaker\": \"string\",\n  \"capacity\": 6217,\n  \"created_at\": \"1968-09-18T02:08:09.600Z\",\n  \"createdBy\": 1236\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Get all workshops",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/content/workshops",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"content",
+														"workshops"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/workshops",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"workshops"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"workshop_id\": 8196,\n    \"title\": \"string\",\n    \"description\": \"string\",\n    \"location\": \"string\",\n    \"event_date\": \"1958-03-31\",\n    \"speaker\": \"string\",\n    \"capacity\": 3481,\n    \"created_at\": \"1971-04-14T18:45:09.991Z\",\n    \"createdBy\": 4215\n  },\n  {\n    \"workshop_id\": 6623,\n    \"title\": \"string\",\n    \"description\": \"string\",\n    \"location\": \"string\",\n    \"event_date\": \"1973-02-20\",\n    \"speaker\": \"string\",\n    \"capacity\": 35,\n    \"created_at\": \"1977-04-19T15:20:06.348Z\",\n    \"createdBy\": 3203\n  }\n]"
+												}
+											]
+										},
+										{
+											"name": "Create new workshop",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"title\": \"First Aid Basics\",\n  \"category\": \"Emergency\",\n  \"language\": \"Arabic\",\n  \"region\": \"Nablus\",\n  \"imageUrl\": \"string\",\n  \"description\": \"string\",\n  \"date\": \"2025-03-05\",\n  \"time\": {\n    \"hour\": 7777,\n    \"minute\": 6558,\n    \"second\": 7211,\n    \"nano\": 5646\n  },\n  \"createdBy\": 4\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/content/workshops",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"content",
+														"workshops"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"title\": \"First Aid Basics\",\n  \"category\": \"Emergency\",\n  \"language\": \"Arabic\",\n  \"region\": \"Nablus\",\n  \"imageUrl\": \"string\",\n  \"description\": \"string\",\n  \"date\": \"2025-03-05\",\n  \"time\": {\n    \"hour\": 7777,\n    \"minute\": 6558,\n    \"second\": 7211,\n    \"nano\": 5646\n  },\n  \"createdBy\": 4\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/workshops",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"workshops"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"workshop_id\": 8621,\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"location\": \"string\",\n  \"event_date\": \"1996-05-27\",\n  \"speaker\": \"string\",\n  \"capacity\": 6217,\n  \"created_at\": \"1968-09-18T02:08:09.600Z\",\n  \"createdBy\": 1236\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "webinars",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Get webinar by ID",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/webinars/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"webinars",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/content/webinars/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"content",
+																		"webinars",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"webinar_id\": 3299,\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"link\": \"string\",\n  \"scheduled_at\": \"2007-02-05T01:32:46.827Z\",\n  \"host\": \"string\",\n  \"capacity\": 956,\n  \"created_at\": \"1953-12-23T19:26:15.982Z\",\n  \"createdBy\": 8447\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Get all webinars",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/content/webinars",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"content",
+														"webinars"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/webinars",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"webinars"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"webinar_id\": 1339,\n    \"title\": \"string\",\n    \"description\": \"string\",\n    \"link\": \"string\",\n    \"scheduled_at\": \"1981-04-17T12:57:41.289Z\",\n    \"host\": \"string\",\n    \"capacity\": 9680,\n    \"created_at\": \"1995-04-19T08:37:28.497Z\",\n    \"createdBy\": 1404\n  },\n  {\n    \"webinar_id\": 6815,\n    \"title\": \"string\",\n    \"description\": \"string\",\n    \"link\": \"string\",\n    \"scheduled_at\": \"1988-06-03T03:48:29.373Z\",\n    \"host\": \"string\",\n    \"capacity\": 933,\n    \"created_at\": \"1993-04-04T08:28:49.043Z\",\n    \"createdBy\": 7416\n  }\n]"
+												}
+											]
+										},
+										{
+											"name": "Create new webinar",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"title\": \"Managing Diabetes\",\n  \"category\": \"Chronic Disease\",\n  \"language\": \"Arabic\",\n  \"region\": \"Hebron\",\n  \"imageUrl\": \"string\",\n  \"speaker\": \"Dr. Ali Omar\",\n  \"link\": \"https://zoom.com/abc123\",\n  \"date\": \"2025-04-01\",\n  \"time\": {\n    \"hour\": 7092,\n    \"minute\": 5981,\n    \"second\": 8644,\n    \"nano\": 9828\n  },\n  \"createdBy\": 4\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/content/webinars",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"content",
+														"webinars"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"title\": \"Managing Diabetes\",\n  \"category\": \"Chronic Disease\",\n  \"language\": \"Arabic\",\n  \"region\": \"Hebron\",\n  \"imageUrl\": \"string\",\n  \"speaker\": \"Dr. Ali Omar\",\n  \"link\": \"https://zoom.com/abc123\",\n  \"date\": \"2025-04-01\",\n  \"time\": {\n    \"hour\": 7092,\n    \"minute\": 5981,\n    \"second\": 8644,\n    \"nano\": 9828\n  },\n  \"createdBy\": 4\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/webinars",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"webinars"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"webinar_id\": 3299,\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"link\": \"string\",\n  \"scheduled_at\": \"2007-02-05T01:32:46.827Z\",\n  \"host\": \"string\",\n  \"capacity\": 956,\n  \"created_at\": \"1953-12-23T19:26:15.982Z\",\n  \"createdBy\": 8447\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "notifications",
+									"item": [
+										{
+											"name": "Create notification",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"notification_id\": 9090,\n  \"user_id\": 1799,\n  \"type\": \"string\",\n  \"reference_table\": \"string\",\n  \"reference_id\": 2625,\n  \"message\": \"string\",\n  \"is_read\": false,\n  \"created_at\": \"1964-01-05T21:07:44.167Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/content/notifications",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"content",
+														"notifications"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"notification_id\": 9090,\n  \"user_id\": 1799,\n  \"type\": \"string\",\n  \"reference_table\": \"string\",\n  \"reference_id\": 2625,\n  \"message\": \"string\",\n  \"is_read\": false,\n  \"created_at\": \"1964-01-05T21:07:44.167Z\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/notifications",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"notifications"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"notification_id\": 9090,\n  \"user_id\": 1799,\n  \"type\": \"string\",\n  \"reference_table\": \"string\",\n  \"reference_id\": 2625,\n  \"message\": \"string\",\n  \"is_read\": false,\n  \"created_at\": \"1964-01-05T21:07:44.167Z\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "missions",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Get medical mission by ID",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/missions/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"missions",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/content/missions/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"content",
+																		"missions",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"mission_id\": 2663,\n  \"ngo_id\": 4392,\n  \"title\": \"string\",\n  \"specialty\": \"string\",\n  \"location\": \"string\",\n  \"start_date\": \"2020-05-08\",\n  \"end_date\": \"1989-04-17\",\n  \"details\": \"string\",\n  \"is_active\": false,\n  \"created_at\": \"2005-04-14T16:11:38.551Z\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Get all medical missions",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/content/missions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"content",
+														"missions"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/missions",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"missions"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"mission_id\": 3020,\n    \"ngo_id\": 1190,\n    \"title\": \"string\",\n    \"specialty\": \"string\",\n    \"location\": \"string\",\n    \"start_date\": \"2024-08-15\",\n    \"end_date\": \"1948-09-13\",\n    \"details\": \"string\",\n    \"is_active\": false,\n    \"created_at\": \"2019-08-08T09:53:53.761Z\"\n  },\n  {\n    \"mission_id\": 5411,\n    \"ngo_id\": 884,\n    \"title\": \"string\",\n    \"specialty\": \"string\",\n    \"location\": \"string\",\n    \"start_date\": \"1975-04-17\",\n    \"end_date\": \"2003-05-16\",\n    \"details\": \"string\",\n    \"is_active\": false,\n    \"created_at\": \"1991-09-28T16:53:59.014Z\"\n  }\n]"
+												}
+											]
+										},
+										{
+											"name": "Create new medical mission",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"mission_id\": 2663,\n  \"ngo_id\": 4392,\n  \"title\": \"string\",\n  \"specialty\": \"string\",\n  \"location\": \"string\",\n  \"start_date\": \"2020-05-08\",\n  \"end_date\": \"1989-04-17\",\n  \"details\": \"string\",\n  \"is_active\": false,\n  \"created_at\": \"2005-04-14T16:11:38.551Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/content/missions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"content",
+														"missions"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"mission_id\": 2663,\n  \"ngo_id\": 4392,\n  \"title\": \"string\",\n  \"specialty\": \"string\",\n  \"location\": \"string\",\n  \"start_date\": \"2020-05-08\",\n  \"end_date\": \"1989-04-17\",\n  \"details\": \"string\",\n  \"is_active\": false,\n  \"created_at\": \"2005-04-14T16:11:38.551Z\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/content/missions",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"content",
+																"missions"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"mission_id\": 2663,\n  \"ngo_id\": 4392,\n  \"title\": \"string\",\n  \"specialty\": \"string\",\n  \"location\": \"string\",\n  \"start_date\": \"2020-05-08\",\n  \"end_date\": \"1989-04-17\",\n  \"details\": \"string\",\n  \"is_active\": false,\n  \"created_at\": \"2005-04-14T16:11:38.551Z\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "auth",
+							"item": [
+								{
+									"name": "profile",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Get user profile",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/profile/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"profile",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/auth/profile/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"auth",
+																		"profile",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": 6121,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"role\": \"string\",\n  \"phone\": \"string\"\n}"
+														}
+													]
+												},
+												{
+													"name": "Update user profile",
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": 6121,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"role\": \"string\",\n  \"phone\": \"string\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/profile/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"profile",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"id\": 6121,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"role\": \"string\",\n  \"phone\": \"string\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/auth/profile/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"auth",
+																		"profile",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": 6121,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"role\": \"string\",\n  \"phone\": \"string\"\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "register",
+									"item": [
+										{
+											"name": "Register new user",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"Ahmad Hassan\",\n  \"email\": \"ahmad@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"PATIENT\",\n  \"phone\": \"0599123456\",\n  \"age\": 25,\n  \"gender\": \"M\",\n  \"specialization\": \"Cardiology\",\n  \"licenseNo\": \"LIC123456\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/auth/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"register"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"Ahmad Hassan\",\n  \"email\": \"ahmad@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"PATIENT\",\n  \"phone\": \"0599123456\",\n  \"age\": 25,\n  \"gender\": \"M\",\n  \"specialization\": \"Cardiology\",\n  \"licenseNo\": \"LIC123456\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/register",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"register"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": 6121,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"role\": \"string\",\n  \"phone\": \"string\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "login",
+									"item": [
+										{
+											"name": "Login user",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"ahmad@example.com\",\n  \"password\": \"password123\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/auth/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"login"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"email\": \"ahmad@example.com\",\n  \"password\": \"password123\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/login",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"login"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": 6121,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"role\": \"string\",\n  \"phone\": \"string\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "users",
+									"item": [
+										{
+											"name": "Get all users (Admin)",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/auth/users",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"users"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/users",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"users"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"id\": 9863,\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"role\": \"string\",\n    \"phone\": \"string\"\n  },\n  {\n    \"id\": 5528,\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"role\": \"string\",\n    \"phone\": \"string\"\n  }\n]"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "consultations",
+							"item": [
+								{
+									"name": "translate",
+									"item": [
+										{
+											"name": "Translate text",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"text\": \"مرحبا\",\n  \"sourceLang\": \"ar\",\n  \"targetLang\": \"en\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/consultations/translate",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"consultations",
+														"translate"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"text\": \"مرحبا\",\n  \"sourceLang\": \"ar\",\n  \"targetLang\": \"en\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/consultations/translate",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"consultations",
+																"translate"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "string"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "support-groups",
+									"item": [
+										{
+											"name": "{groupId}",
+											"item": [
+												{
+													"name": "messages",
+													"item": [
+														{
+															"name": "Get group messages",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/consultations/support-groups/:groupId/messages",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"consultations",
+																		"support-groups",
+																		":groupId",
+																		"messages"
+																	],
+																	"variable": [
+																		{
+																			"key": "groupId",
+																			"value": "831"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/consultations/support-groups/:groupId/messages",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"consultations",
+																				"support-groups",
+																				":groupId",
+																				"messages"
+																			],
+																			"variable": [
+																				{
+																					"key": "groupId"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  {\n    \"id\": 9448,\n    \"appointmentId\": 1,\n    \"senderId\": 1,\n    \"content\": \"كيف حالك؟\",\n    \"translatedContent\": \"How are you?\",\n    \"timestamp\": \"2018-01-17T12:52:42.750Z\"\n  },\n  {\n    \"id\": 4918,\n    \"appointmentId\": 1,\n    \"senderId\": 1,\n    \"content\": \"كيف حالك؟\",\n    \"translatedContent\": \"How are you?\",\n    \"timestamp\": \"1958-11-30T17:05:02.960Z\"\n  }\n]"
+																}
+															]
+														},
+														{
+															"name": "Post group message",
+															"request": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"id\": 2833,\n  \"appointmentId\": 1,\n  \"senderId\": 1,\n  \"content\": \"كيف حالك؟\",\n  \"translatedContent\": \"How are you?\",\n  \"timestamp\": \"1966-04-18T20:08:31.658Z\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/consultations/support-groups/:groupId/messages",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"consultations",
+																		"support-groups",
+																		":groupId",
+																		"messages"
+																	],
+																	"variable": [
+																		{
+																			"key": "groupId",
+																			"value": "831"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"id\": 2833,\n  \"appointmentId\": 1,\n  \"senderId\": 1,\n  \"content\": \"كيف حالك؟\",\n  \"translatedContent\": \"How are you?\",\n  \"timestamp\": \"1966-04-18T20:08:31.658Z\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/consultations/support-groups/:groupId/messages",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"consultations",
+																				"support-groups",
+																				":groupId",
+																				"messages"
+																			],
+																			"variable": [
+																				{
+																					"key": "groupId"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"id\": 2833,\n  \"appointmentId\": 1,\n  \"senderId\": 1,\n  \"content\": \"كيف حالك؟\",\n  \"translatedContent\": \"How are you?\",\n  \"timestamp\": \"1966-04-18T20:08:31.658Z\"\n}"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "join",
+													"item": [
+														{
+															"name": "Join group",
+															"request": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/consultations/support-groups/:groupId/join?userId=831",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"consultations",
+																		"support-groups",
+																		":groupId",
+																		"join"
+																	],
+																	"query": [
+																		{
+																			"key": "userId",
+																			"value": "831"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "groupId",
+																			"value": "831"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/consultations/support-groups/:groupId/join?userId=831",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"consultations",
+																				"support-groups",
+																				":groupId",
+																				"join"
+																			],
+																			"query": [
+																				{
+																					"key": "userId",
+																					"value": "831"
+																				}
+																			],
+																			"variable": [
+																				{
+																					"key": "groupId"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [],
+																	"cookie": [],
+																	"body": ""
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Create support group",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 6872,\n  \"name\": \"Anxiety Support\",\n  \"description\": \"Talk about anxiety and coping\",\n  \"createdBy\": 1\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/consultations/support-groups",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"consultations",
+														"support-groups"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": 6872,\n  \"name\": \"Anxiety Support\",\n  \"description\": \"Talk about anxiety and coping\",\n  \"createdBy\": 1\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/consultations/support-groups",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"consultations",
+																"support-groups"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": 6872,\n  \"name\": \"Anxiety Support\",\n  \"description\": \"Talk about anxiety and coping\",\n  \"createdBy\": 1\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "messages",
+									"item": [
+										{
+											"name": "Send message",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 2833,\n  \"appointmentId\": 1,\n  \"senderId\": 1,\n  \"content\": \"كيف حالك؟\",\n  \"translatedContent\": \"How are you?\",\n  \"timestamp\": \"1966-04-18T20:08:31.658Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/consultations/messages",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"consultations",
+														"messages"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": 2833,\n  \"appointmentId\": 1,\n  \"senderId\": 1,\n  \"content\": \"كيف حالك؟\",\n  \"translatedContent\": \"How are you?\",\n  \"timestamp\": \"1966-04-18T20:08:31.658Z\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/consultations/messages",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"consultations",
+																"messages"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": 2833,\n  \"appointmentId\": 1,\n  \"senderId\": 1,\n  \"content\": \"كيف حالك؟\",\n  \"translatedContent\": \"How are you?\",\n  \"timestamp\": \"1966-04-18T20:08:31.658Z\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "appointments",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "messages",
+													"item": [
+														{
+															"name": "Get messages",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/consultations/appointments/:id/messages",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"consultations",
+																		"appointments",
+																		":id",
+																		"messages"
+																	],
+																	"variable": [
+																		{
+																			"key": "id",
+																			"value": "831"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/v1/consultations/appointments/:id/messages",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"v1",
+																				"consultations",
+																				"appointments",
+																				":id",
+																				"messages"
+																			],
+																			"variable": [
+																				{
+																					"key": "id"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  {\n    \"id\": 9448,\n    \"appointmentId\": 1,\n    \"senderId\": 1,\n    \"content\": \"كيف حالك؟\",\n    \"translatedContent\": \"How are you?\",\n    \"timestamp\": \"2018-01-17T12:52:42.750Z\"\n  },\n  {\n    \"id\": 4918,\n    \"appointmentId\": 1,\n    \"senderId\": 1,\n    \"content\": \"كيف حالك؟\",\n    \"translatedContent\": \"How are you?\",\n    \"timestamp\": \"1958-11-30T17:05:02.960Z\"\n  }\n]"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "Get appointment",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/consultations/appointments/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"consultations",
+																"appointments",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "831"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/consultations/appointments/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"consultations",
+																		"appointments",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": 2007,\n  \"patientId\": 1,\n  \"doctorId\": 1,\n  \"dateTime\": \"1968-10-05T22:45:55.779Z\",\n  \"status\": \"PENDING\",\n  \"mode\": \"VIDEO\",\n  \"anonymous\": true,\n  \"type\": \"MENTAL\",\n  \"notes\": \"string\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Book appointment",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 2007,\n  \"patientId\": 1,\n  \"doctorId\": 1,\n  \"dateTime\": \"1968-10-05T22:45:55.779Z\",\n  \"status\": \"PENDING\",\n  \"mode\": \"VIDEO\",\n  \"anonymous\": true,\n  \"type\": \"MENTAL\",\n  \"notes\": \"string\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/consultations/appointments",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"consultations",
+														"appointments"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": 2007,\n  \"patientId\": 1,\n  \"doctorId\": 1,\n  \"dateTime\": \"1968-10-05T22:45:55.779Z\",\n  \"status\": \"PENDING\",\n  \"mode\": \"VIDEO\",\n  \"anonymous\": true,\n  \"type\": \"MENTAL\",\n  \"notes\": \"string\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/consultations/appointments",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"consultations",
+																"appointments"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": 2007,\n  \"patientId\": 1,\n  \"doctorId\": 1,\n  \"dateTime\": \"1968-10-05T22:45:55.779Z\",\n  \"status\": \"PENDING\",\n  \"mode\": \"VIDEO\",\n  \"anonymous\": true,\n  \"type\": \"MENTAL\",\n  \"notes\": \"string\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "external",
+							"item": [
+								{
+									"name": "weather",
+									"item": [
+										{
+											"name": "{city}",
+											"item": [
+												{
+													"name": "Get current weather for a city",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/external/weather/:city",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"external",
+																"weather",
+																":city"
+															],
+															"variable": [
+																{
+																	"key": "city",
+																	"value": "string"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/external/weather/:city",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"external",
+																		"weather",
+																		":city"
+																	],
+																	"variable": [
+																		{
+																			"key": "city"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "string"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "health-recommendations",
+									"item": [
+										{
+											"name": "{city}",
+											"item": [
+												{
+													"name": "Get health recommendations based on weather",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/external/health-recommendations/:city",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"external",
+																"health-recommendations",
+																":city"
+															],
+															"variable": [
+																{
+																	"key": "city",
+																	"value": "string"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/external/health-recommendations/:city",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"external",
+																		"health-recommendations",
+																		":city"
+																	],
+																	"variable": [
+																		{
+																			"key": "city"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "string"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "air-quality",
+									"item": [
+										{
+											"name": "{city}",
+											"item": [
+												{
+													"name": "Get air quality index for a city",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/external/air-quality/:city",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"external",
+																"air-quality",
+																":city"
+															],
+															"variable": [
+																{
+																	"key": "city",
+																	"value": "string"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/external/air-quality/:city",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"external",
+																		"air-quality",
+																		":city"
+																	],
+																	"variable": [
+																		{
+																			"key": "city"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "string"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "alerts",
+							"item": [
+								{
+									"name": "Get all active public health alerts",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/alerts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"alerts"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/alerts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"alerts"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": 5196,\n    \"title\": \"string\",\n    \"content\": \"string\",\n    \"severity\": \"string\",\n    \"region\": \"string\",\n    \"publishedAt\": \"1985-07-24T18:09:11.392Z\",\n    \"active\": true\n  },\n  {\n    \"id\": 913,\n    \"title\": \"string\",\n    \"content\": \"string\",\n    \"severity\": \"string\",\n    \"region\": \"string\",\n    \"publishedAt\": \"2018-04-23T21:43:45.053Z\",\n    \"active\": false\n  }\n]"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8081"
+		}
+	]
+}
