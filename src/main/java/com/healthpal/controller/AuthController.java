@@ -6,6 +6,7 @@ import com.healthpal.dto.UserDTO;
 import com.healthpal.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,13 +23,13 @@ public class AuthController {
 
     @Operation(summary = "Register new user")
     @PostMapping("/register")
-    public ResponseEntity<UserDTO> register(@RequestBody RegisterRequestDTO dto) {
+    public ResponseEntity<UserDTO> register(@Valid @RequestBody RegisterRequestDTO dto) {  // ← Added @Valid
         return ResponseEntity.ok(authService.register(dto));
     }
 
     @Operation(summary = "Login user")
     @PostMapping("/login")
-    public ResponseEntity<UserDTO> login(@RequestBody LoginRequestDTO dto) {
+    public ResponseEntity<UserDTO> login(@Valid @RequestBody LoginRequestDTO dto) {  // ← Added @Valid
         return ResponseEntity.ok(authService.login(dto));
     }
 
